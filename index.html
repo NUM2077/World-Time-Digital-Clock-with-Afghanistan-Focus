@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afghanistan & World Time Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Afghanistan & World Time Digital Clock</h1>
+        
+        <!-- Settings Panel -->
+        <div class="settings-toggle">
+            <button id="settingsBtn"><i class="fas fa-cog"></i></button>
+        </div>
+        <div class="settings-panel" id="settingsPanel">
+            <h3>Settings</h3>
+            <div class="setting-option">
+                <label>Time Format:</label>
+                <select id="timeFormat">
+                    <option value="24">24-hour</option>
+                    <option value="12">12-hour</option>
+                </select>
+            </div>
+            <div class="setting-option">
+                <label>Add Time Zone:</label>
+                <input type="text" id="timeZoneSearch" placeholder="Search time zones...">
+                <div id="searchResults" class="search-results"></div>
+            </div>
+            <div class="setting-option">
+                <label>Weather Display:</label>
+                <input type="checkbox" id="weatherToggle">
+            </div>
+        </div>
+
+        <!-- Main Clock for Afghanistan -->
+        <div class="main-clock">
+            <h2>Kabul (AFG)</h2>
+            <div id="kabul" class="time main-time"></div>
+            <div id="kabul-date" class="date"></div>
+            <div id="kabul-weather" class="weather"></div>
+        </div>
+
+        <!-- Dynamic Clocks Container -->
+        <div class="clocks-container" id="clocksContainer">
+            <!-- Default clocks will be added here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

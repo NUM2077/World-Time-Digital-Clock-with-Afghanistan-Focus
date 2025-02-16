@@ -1,0 +1,297 @@
+/* Add these new styles to your existing CSS */
+
+/* Weather Styles */
+.weather-info {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.weather-main {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: #81c784;
+}
+
+.weather-description {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #a5d6a7;
+    text-transform: capitalize;
+}
+
+.weather-loading {
+    color: #81c784;
+    font-style: italic;
+}
+
+.weather-error {
+    color: #ff8a80;
+    font-style: italic;
+}
+
+/* Settings Panel Improvements */
+.settings-panel {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #2d2d2d;
+    padding: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    overflow-y: auto;
+}
+
+.settings-toggle button {
+    background: #4CAF50;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    z-index: 1001;
+}
+
+.settings-toggle button:hover {
+    background: #45a049;
+    transform: rotate(45deg);
+}
+
+.settings-panel.active {
+    right: 0;
+}
+
+/* Search Results Improvements */
+.search-results {
+    max-height: 200px;
+    overflow-y: auto;
+    background: #1a1a1a;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    display: none;
+    scrollbar-width: thin;
+    scrollbar-color: #4CAF50 #1a1a1a;
+}
+
+.search-result-item {
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid #333;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+/* Error Message Styles */
+.error {
+    color: #ff8a80;
+    padding: 0.8rem;
+    text-align: center;
+    font-style: italic;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #1a1a1a;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    color: #4CAF50;
+}
+
+/* Settings Panel Styles */
+.settings-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.settings-toggle button {
+    background: #4CAF50;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.settings-panel {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #2d2d2d;
+    padding: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+}
+
+.settings-panel.active {
+    right: 0;
+}
+
+.setting-option {
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.setting-option label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #81c784;
+}
+
+.setting-option select,
+.setting-option input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    background: #1a1a1a;
+    border: 1px solid #4CAF50;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Search Results Styles */
+.search-results {
+    max-height: 200px;
+    overflow-y: auto;
+    background: #1a1a1a;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.search-result-item {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    background: #4CAF50;
+}
+
+/* Main Clock Styles */
+.main-clock {
+    background: #2d2d2d;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 500px;
+    border: 2px solid #4CAF50;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+}
+
+.weather {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #81c784;
+}
+
+/* Existing styles remain the same... */
+.main-clock h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #81c784;
+}
+
+.main-time {
+    font-size: 3.5rem !important;
+    margin-bottom: 1rem;
+}
+
+.date {
+    font-size: 1.2rem;
+    color: #81c784;
+    margin-top: 0.5rem;
+}
+
+.clocks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin-top: 2rem;
+}
+
+.clock {
+    background: #2d2d2d;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.clock .remove-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    color: #ff5252;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .clocks-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-clock {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .main-time {
+        font-size: 2.8rem !important;
+    }
+
+    .settings-panel {
+        width: 100%;
+        right: -100%;
+    }
+}
